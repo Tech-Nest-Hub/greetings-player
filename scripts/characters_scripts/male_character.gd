@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
 
-const SPEED = 150
+const SPEED = 300
 var last_direction = "down"
 
 func _physics_process(delta):
@@ -30,18 +30,29 @@ func _physics_process(delta):
 
 
 func play_walk_animation(dir: Vector2):
-	# Pick the dominant direction
-	if abs(dir.x) > abs(dir.y):
-		if dir.x > 0:
-			anim.play("walk_right")
-			last_direction = "right"
-		else:
-			anim.play("walk_left")
-			last_direction = "left"
-	else:
-		if dir.y > 0:
-			anim.play("walk_right_down")
-			last_direction = "down"
-		else:
-			anim.play("walk_up")
-			last_direction = "up"
+	# Handle diagonals first
+	if dir.x > 0 and dir.y < 0:
+		anim.play("walk_right_up")
+		last_direction = "right_up"
+	elif dir.x > 0 and dir.y > 0:
+		anim.play("walk_right_down")
+		last_direction = "right_down"
+	elif dir.x < 0 and dir.y < 0:
+		anim.play("walk_left_up")
+		last_direction = "left_up"
+	elif dir.x < 0 and dir.y > 0:
+		anim.play("walk_left_down")
+		last_direction = "left_down"
+	# Handle straight directions
+	elif dir.x > 0:
+		anim.play("walk_right_down")
+		last_direction = "right_down"
+	elif dir.x < 0:
+		anim.play("walk_left_down")
+		last_direction = "left_down"
+	elif dir.y > 0:
+		anim.play("walk_down")
+		last_direction = "down"
+	elif dir.y < 0:
+		anim.play("walk_up")
+		last_direction = "up"
