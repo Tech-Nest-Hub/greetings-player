@@ -1,33 +1,37 @@
 [gd_scene load_steps=3 format=3 uid="uid://ch82to6hvs5o1"]
 
-[ext_resource type="Script" uid="uid://bssjvunqtkrdu" path="res://scenes/splash_screen.gd" id="1_hsxvm"]
-[ext_resource type="Texture2D" uid="uid://cdn4onjp77dyq" path="res://images/ghost_logo.jpeg" id="2_4gp4q"]
+[ext_resource type="Script" uid="uid://cee7qqt5cxod6" path="res://scripts/splash_screen.gd" id="1_hsxvm"]
+[ext_resource type="FontFile" uid="uid://ctwi4qwh36a4i" path="res://assets/fonts/Game of Brush.ttf" id="1_n4g2v"]
 
-[node name="SplashScreen" type="Node2D"]
+[node name="Splash_Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_hsxvm")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(591, 292)
-scale = Vector2(0.6891304, 0.6891304)
-texture = ExtResource("2_4gp4q")
-offset = Vector2(10, 100)
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -244.0
+offset_top = -21.5
+offset_right = 244.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_n4g2v")
+theme_override_font_sizes/font_size = 40
+text = "CREATED BY"
 
-[node name="SplashTimer" type="Timer" parent="."]
-wait_time = 2.0
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
 one_shot = true
 autostart = true
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 443.0
-offset_top = 116.0
-offset_right = 755.0
-offset_bottom = 198.0
-theme_override_colors/search_result_color = Color(1, 1, 1, 1)
-theme_override_colors/caret_background_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_colors/background_color = Color(1, 1, 1, 0)
-theme_override_font_sizes/font_size = 50
-text = "Created By : "
-scroll_smooth = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

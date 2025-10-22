@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdr8lntqakus0"
-path="res://.godot/imported/free_overview.png-a3aeb88432ef6c96a602e68b6019ee35.ctex"
+uid="uid://bixen0w3g8a4q"
+path="res://.godot/imported/menu_bg.png-4a689f3cbf3ff4b6b09bd45fc642dbb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Modern_Interiors_Free_v2.2/Modern tiles_Free/free_overview.png"
-dest_files=["res://.godot/imported/free_overview.png-a3aeb88432ef6c96a602e68b6019ee35.ctex"]
+source_file="res://assets/images/menu_bg.png"
+dest_files=["res://.godot/imported/menu_bg.png-4a689f3cbf3ff4b6b09bd45fc642dbb3.ctex"]
 
 [params]
 

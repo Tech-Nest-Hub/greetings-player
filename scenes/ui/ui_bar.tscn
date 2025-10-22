@@ -1,0 +1,273 @@
+[gd_scene load_steps=23 format=3 uid="uid://qhjd2tb64aul"]
+
+[ext_resource type="Script" uid="uid://g3iyvfj3t3bp" path="res://scripts/ui/ui_bar.gd" id="1_k3dy2"]
+[ext_resource type="Texture2D" uid="uid://vbarl6pm4knk" path="res://assets/The Male adventurer - Free/Idle/idle_right_down.png" id="1_svl8d"]
+[ext_resource type="FontFile" uid="uid://ctwi4qwh36a4i" path="res://assets/fonts/Game of Brush.ttf" id="3_ps5rt"]
+[ext_resource type="Script" uid="uid://b7nefo64lxdcx" path="res://scripts/ui/hp.gd" id="4_8606s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8606s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ps5rt"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.9077384, 0.00085807504, 0.9386246, 0.6)
+shadow_size = 3
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8606s"]
+atlas = ExtResource("1_svl8d")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwrar"]
+atlas = ExtResource("1_svl8d")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arcug"]
+atlas = ExtResource("1_svl8d")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjwsf"]
+atlas = ExtResource("1_svl8d")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j5gs"]
+atlas = ExtResource("1_svl8d")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3qod"]
+atlas = ExtResource("1_svl8d")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5h7p1"]
+atlas = ExtResource("1_svl8d")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8gga"]
+atlas = ExtResource("1_svl8d")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xi17a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8606s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwrar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arcug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjwsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j5gs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3qod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5h7p1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8gga")
+}],
+"loop": true,
+"name": &"Male_Player",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwrar"]
+bg_color = Color(0.82379436, 0.5264886, 0.0974667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arcug"]
+bg_color = Color(0.96879274, 0.6415889, 0.2185489, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hwrar"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjwsf"]
+bg_color = Color(0.44279525, 0.6732402, 0.3397711, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7j5gs"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_color = Color(0, 0, 0, 0.27450982)
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3qod"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5h7p1"]
+bg_color = Color(0.1982953, 0.64314234, 0.884613, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="UiBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k3dy2")
+
+[node name="PlayerInfoBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 290.0
+offset_bottom = 95.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8606s")
+metadata/_edit_use_anchors_ = true
+
+[node name="AvatarFrame" type="Panel" parent="PlayerInfoBox"]
+modulate = Color(0.11052487, 0.31626254, 0.3403933, 1)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 8.181791
+offset_top = 10.590923
+offset_right = 70.43637
+offset_bottom = 34.82994
+grow_vertical = 2
+rotation = 6.2831855
+scale = Vector2(0.9440561, 1.2385794)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ps5rt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerInfoBox"]
+position = Vector2(36, 37)
+scale = Vector2(2.639999, 2.639999)
+sprite_frames = SubResource("SpriteFrames_xi17a")
+animation = &"Male_Player"
+
+[node name="ExperienceBar" type="ProgressBar" parent="PlayerInfoBox"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -21.0
+offset_right = 39.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.347661e-06, 0.68837094, 0.57704926, 1)
+theme_override_colors/font_outline_color = Color(0.24489385, 0.6606368, 0.88719267, 1)
+theme_override_fonts/font = ExtResource("3_ps5rt")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/background = SubResource("StyleBoxFlat_hwrar")
+theme_override_styles/fill = SubResource("StyleBoxFlat_arcug")
+value = 90.0
+show_percentage = false
+
+[node name="HP" type="ProgressBar" parent="PlayerInfoBox"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -77.0
+offset_right = 134.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.347661e-06, 0.68837094, 0.57704926, 1)
+theme_override_colors/font_outline_color = Color(0.24489385, 0.6606368, 0.88719267, 1)
+theme_override_fonts/font = ExtResource("3_ps5rt")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/background = SubResource("StyleBoxEmpty_hwrar")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xjwsf")
+value = 10.0
+show_percentage = false
+script = ExtResource("4_8606s")
+
+[node name="DamageBar" type="ProgressBar" parent="PlayerInfoBox/HP"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_7j5gs")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n3qod")
+value = 30.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="PlayerInfoBox/HP"]
+wait_time = 0.4
+one_shot = true
+
+[node name="HP2" type="ProgressBar" parent="PlayerInfoBox"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -47.0
+offset_right = 115.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.347661e-06, 0.68837094, 0.57704926, 1)
+theme_override_colors/font_outline_color = Color(0.24489385, 0.6606368, 0.88719267, 1)
+theme_override_fonts/font = ExtResource("3_ps5rt")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/background = SubResource("StyleBoxEmpty_hwrar")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5h7p1")
+value = 10.0
+show_percentage = false
+script = ExtResource("4_8606s")
+
+[node name="DamageBar" type="ProgressBar" parent="PlayerInfoBox/HP2"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_7j5gs")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n3qod")
+value = 30.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="PlayerInfoBox/HP2"]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="PlayerInfoBox/HP/Timer" to="PlayerInfoBox/HP" method="_on_timer_timeout"]
+[connection signal="timeout" from="PlayerInfoBox/HP2/Timer" to="PlayerInfoBox/HP2" method="_on_timer_timeout"]
