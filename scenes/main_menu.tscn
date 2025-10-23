@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0p0u3r7kpukv"]
+[gd_scene load_steps=7 format=3 uid="uid://b0p0u3r7kpukv"]
 
 [ext_resource type="Script" uid="uid://dju7dfnm11vtn" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://bixen0w3g8a4q" path="res://assets/images/menu_bg.png" id="1_ekxnf"]
@@ -9,7 +9,16 @@ texture = ExtResource("1_ekxnf")
 modulate_color = Color(0.40705642, 0.40705612, 0.40705603, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0.8920336, 0.8920336, 0.89203364, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
+bg_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -26,7 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bqqt6")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Background" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,7 +44,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_wu84c")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MainButtons" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -50,44 +59,44 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 10
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 text = "Start Game"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Button3" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 text = "Options"
 
-[node name="Button4" type="Button" parent="VBoxContainer"]
+[node name="Button4" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 text = "Credits"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="Button2" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 text = "Exit"
 
 [node name="Label" type="Label" parent="."]
@@ -115,5 +124,54 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_exit_pressed"]
+[node name="Options" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.75
+offset_top = -188.25
+offset_right = 299.75
+offset_bottom = 188.25
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = 2.25
+offset_bottom = 75.25
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 28
+text = "OPTIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="Options"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.98999166
+anchor_top = 0.029216468
+anchor_right = 0.98999166
+anchor_bottom = 0.029216468
+offset_left = -98.75
+offset_bottom = 45.0
+grow_horizontal = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vue75")
+text = "X"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="MainButtons/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainButtons/Button3" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MainButtons/Button2" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]

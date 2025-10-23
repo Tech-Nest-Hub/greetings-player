@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://bx4w4g706nb5d"]
+[gd_scene load_steps=104 format=3 uid="uid://bx4w4g706nb5d"]
 
 [ext_resource type="Script" uid="uid://bby8dmanw531r" path="res://scripts/characters_scripts/male_character.gd" id="1_556u7"]
 [ext_resource type="Texture2D" uid="uid://clvtoer4n1oyf" path="res://assets/The Male adventurer - Free/Idle/idle_down.png" id="1_c4ykh"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d0yl27encbdye" path="res://assets/The Male adventurer - Free/Walk/walk_left_down.png" id="9_0r4m1"]
 [ext_resource type="Texture2D" uid="uid://b66sowmi1udy4" path="res://assets/The Male adventurer - Free/Walk/walk_left_up.png" id="10_sf6kw"]
 [ext_resource type="Texture2D" uid="uid://bdjbkyqgviua6" path="res://assets/The Male adventurer - Free/Walk/walk_up.png" id="11_sf6kw"]
+[ext_resource type="PackedScene" uid="uid://qhjd2tb64aul" path="res://scenes/ui/ui_bar.tscn" id="13_sf6kw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_556u7"]
 size = Vector2(12, 21)
@@ -710,3 +711,9 @@ shape = SubResource("RectangleShape2D_556u7")
 position = Vector2(596, 317)
 sprite_frames = SubResource("SpriteFrames_1xk3j")
 animation = &"idle_left_down"
+
+[node name="UiBar" parent="." instance=ExtResource("13_sf6kw")]
+offset_left = 109.0
+offset_top = 54.0
+offset_right = 109.0
+offset_bottom = 54.0
