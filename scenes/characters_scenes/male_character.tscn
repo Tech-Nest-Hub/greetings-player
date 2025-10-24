@@ -1,18 +1,21 @@
-[gd_scene load_steps=104 format=3 uid="uid://bx4w4g706nb5d"]
+[gd_scene load_steps=123 format=3 uid="uid://bx4w4g706nb5d"]
 
 [ext_resource type="Script" uid="uid://bby8dmanw531r" path="res://scripts/characters_scripts/male_character.gd" id="1_556u7"]
-[ext_resource type="Texture2D" uid="uid://clvtoer4n1oyf" path="res://assets/The Male adventurer - Free/Idle/idle_down.png" id="1_c4ykh"]
-[ext_resource type="Texture2D" uid="uid://05x76ogfe55y" path="res://assets/The Male adventurer - Free/Idle/idle_left_down.png" id="3_l274k"]
-[ext_resource type="Texture2D" uid="uid://b556ps38xaleb" path="res://assets/The Male adventurer - Free/Idle/idle_left_up.png" id="4_mh6x2"]
-[ext_resource type="Texture2D" uid="uid://vbarl6pm4knk" path="res://assets/The Male adventurer - Free/Idle/idle_right_down.png" id="5_v5w4p"]
-[ext_resource type="Texture2D" uid="uid://ccgfrkaq7d235" path="res://assets/The Male adventurer - Free/Idle/idle_right_up.png" id="6_0enou"]
-[ext_resource type="Texture2D" uid="uid://c334o6selm45a" path="res://assets/The Male adventurer - Free/Idle/idle_up.png" id="7_1xk3j"]
-[ext_resource type="Texture2D" uid="uid://cex7mkufgtfnt" path="res://assets/The Male adventurer - Free/Walk/walk_down.png" id="8_1xk3j"]
-[ext_resource type="Texture2D" uid="uid://56wdovcw4usd" path="res://assets/The Male adventurer - Free/Walk/walk_right_down.png" id="8_mh6x2"]
-[ext_resource type="Texture2D" uid="uid://d0yl27encbdye" path="res://assets/The Male adventurer - Free/Walk/walk_left_down.png" id="9_0r4m1"]
-[ext_resource type="Texture2D" uid="uid://b66sowmi1udy4" path="res://assets/The Male adventurer - Free/Walk/walk_left_up.png" id="10_sf6kw"]
-[ext_resource type="Texture2D" uid="uid://bdjbkyqgviua6" path="res://assets/The Male adventurer - Free/Walk/walk_up.png" id="11_sf6kw"]
+[ext_resource type="Texture2D" uid="uid://clvtoer4n1oyf" path="res://assets/characters/The Male adventurer - Free/Idle/idle_down.png" id="1_c4ykh"]
+[ext_resource type="Texture2D" uid="uid://05x76ogfe55y" path="res://assets/characters/The Male adventurer - Free/Idle/idle_left_down.png" id="3_l274k"]
+[ext_resource type="Texture2D" uid="uid://b556ps38xaleb" path="res://assets/characters/The Male adventurer - Free/Idle/idle_left_up.png" id="4_mh6x2"]
+[ext_resource type="Texture2D" uid="uid://vbarl6pm4knk" path="res://assets/characters/The Male adventurer - Free/Idle/idle_right_down.png" id="5_v5w4p"]
+[ext_resource type="Texture2D" uid="uid://ccgfrkaq7d235" path="res://assets/characters/The Male adventurer - Free/Idle/idle_right_up.png" id="6_0enou"]
+[ext_resource type="Texture2D" uid="uid://c334o6selm45a" path="res://assets/characters/The Male adventurer - Free/Idle/idle_up.png" id="7_1xk3j"]
+[ext_resource type="Texture2D" uid="uid://cex7mkufgtfnt" path="res://assets/characters/The Male adventurer - Free/Walk/walk_down.png" id="8_1xk3j"]
+[ext_resource type="Texture2D" uid="uid://c3c7r5ouk1xff" path="res://assets/characters/The Male adventurer - Free/Jump - NEW/Normal/Jump_Down.png" id="8_5ue3y"]
+[ext_resource type="Texture2D" uid="uid://56wdovcw4usd" path="res://assets/characters/The Male adventurer - Free/Walk/walk_right_down.png" id="8_mh6x2"]
+[ext_resource type="Texture2D" uid="uid://d0yl27encbdye" path="res://assets/characters/The Male adventurer - Free/Walk/walk_left_down.png" id="9_0r4m1"]
+[ext_resource type="Texture2D" uid="uid://b66sowmi1udy4" path="res://assets/characters/The Male adventurer - Free/Walk/walk_left_up.png" id="10_sf6kw"]
+[ext_resource type="Texture2D" uid="uid://bdjbkyqgviua6" path="res://assets/characters/The Male adventurer - Free/Walk/walk_up.png" id="11_sf6kw"]
+[ext_resource type="Texture2D" uid="uid://pday3f20xmfg" path="res://assets/characters/The Male adventurer - Free/Walk/walk_right_up.png" id="13_0delp"]
 [ext_resource type="PackedScene" uid="uid://qhjd2tb64aul" path="res://scenes/ui/ui_bar.tscn" id="13_sf6kw"]
+[ext_resource type="Texture2D" uid="uid://b84otvnkpuvka" path="res://assets/characters/The Male adventurer - Free/Shadow.png" id="14_lh6dm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_556u7"]
 size = Vector2(12, 21)
@@ -209,6 +212,38 @@ region = Rect2(288, 0, 48, 64)
 atlas = ExtResource("7_1xk3j")
 region = Rect2(336, 0, 48, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8vk0"]
+atlas = ExtResource("8_5ue3y")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycksh"]
+atlas = ExtResource("8_5ue3y")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwemq"]
+atlas = ExtResource("8_5ue3y")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crlj8"]
+atlas = ExtResource("8_5ue3y")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe3gt"]
+atlas = ExtResource("8_5ue3y")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pklra"]
+atlas = ExtResource("8_5ue3y")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_388vl"]
+atlas = ExtResource("8_5ue3y")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8w4q"]
+atlas = ExtResource("8_5ue3y")
+region = Rect2(336, 0, 48, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_pnje2"]
 atlas = ExtResource("8_1xk3j")
 region = Rect2(0, 0, 48, 64)
@@ -335,6 +370,38 @@ region = Rect2(288, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_du2lp"]
 atlas = ExtResource("8_mh6x2")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ijkk"]
+atlas = ExtResource("13_0delp")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc4kv"]
+atlas = ExtResource("13_0delp")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix8pl"]
+atlas = ExtResource("13_0delp")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkwmg"]
+atlas = ExtResource("13_0delp")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfkks"]
+atlas = ExtResource("13_0delp")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ptqto"]
+atlas = ExtResource("13_0delp")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ioyce"]
+atlas = ExtResource("13_0delp")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwmxv"]
+atlas = ExtResource("13_0delp")
 region = Rect2(336, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6odrh"]
@@ -547,6 +614,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_f8vk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycksh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwemq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crlj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fe3gt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pklra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_388vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8w4q")
+}],
+"loop": true,
+"name": &"jump_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_pnje2")
 }, {
 "duration": 1.0,
@@ -661,7 +757,31 @@ animations = [{
 "name": &"walk_right_down",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ijkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gc4kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix8pl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkwmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfkks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ptqto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ioyce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwmxv")
+}],
 "loop": true,
 "name": &"walk_right_up",
 "speed": 5.0
@@ -710,7 +830,13 @@ shape = SubResource("RectangleShape2D_556u7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(596, 317)
 sprite_frames = SubResource("SpriteFrames_1xk3j")
-animation = &"idle_left_down"
+animation = &"walk_right_up"
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
+z_index = 1
+position = Vector2(-24, -33)
+texture = ExtResource("14_lh6dm")
+centered = false
 
 [node name="UiBar" parent="." instance=ExtResource("13_sf6kw")]
 offset_left = 109.0

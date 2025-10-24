@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
+@onready var tween = get_tree().create_tween()
 
 const SPEED = 300
 var last_direction = "down"
 
-func _physics_process(delta):
+func _physics_process(_delta):
+	
 	var dir = Vector2.ZERO
-
 	# Movement input
 	if Input.is_action_pressed("ui_right"):
 		dir.x += 1
@@ -21,6 +22,10 @@ func _physics_process(delta):
 	dir = dir.normalized()
 	velocity = dir * SPEED
 	move_and_slide()
+	
+		# Jump input
+	if Input.is_action_just_pressed("ui_jump"):
+		start_jump()
 
 	# Animation logic
 	if dir == Vector2.ZERO:
@@ -56,3 +61,13 @@ func play_walk_animation(dir: Vector2):
 	elif dir.y < 0:
 		anim.play("walk_up")
 		last_direction = "up"
+
+
+func start_jump():
+	var start_y = position.y
+	var jump_height = 25
+
+	# fake up & down motion
+	tween.tween_property(self, "position:y", start_y - jump_height, 0.15)
+	tween.tween_property(self, "position:y", start_y, 0.15)
+	tween.tween_callback(Callable(self, "_end_jump"))
