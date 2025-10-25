@@ -35,7 +35,18 @@ func start_loading(path:String) -> void:
 	timer.start()
 	label.text = "Loading Resources"
 	
-	ResourceLoader.load_threaded_request(scene_path)
+	# Detect if running on web
+	var is_web := OS.has_feature("web")
+
+	if is_web:
+		# Web browsers can't do threaded loading properly
+		print("Web build detected — using normal (non-threaded) loading")
+		await get_tree().create_timer(0.5).timeout  # short delay to show "Loading..."
+		loaded_scene = load(scene_path)
+		_change_scene()
+	else:
+		# Threaded loading (works on desktop)
+		ResourceLoader.load_threaded_request(scene_path)
 
 func _on_dots_timer_timeout() -> void:
 	dots_count = (dots_count + 1)%4
