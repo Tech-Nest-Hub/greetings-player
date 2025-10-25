@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://qhjd2tb64aul"]
 
 [ext_resource type="Script" uid="uid://g3iyvfj3t3bp" path="res://scripts/ui/ui_bar.gd" id="1_k3dy2"]
-[ext_resource type="Texture2D" uid="uid://vbarl6pm4knk" path="res://assets/The Male adventurer - Free/Idle/idle_right_down.png" id="1_svl8d"]
+[ext_resource type="Texture2D" uid="uid://vbarl6pm4knk" path="res://assets/characters/The Male adventurer - Free/Idle/idle_right_down.png" id="1_svl8d"]
 [ext_resource type="FontFile" uid="uid://ctwi4qwh36a4i" path="res://assets/fonts/Game of Brush.ttf" id="3_ps5rt"]
 [ext_resource type="Script" uid="uid://b7nefo64lxdcx" path="res://scripts/ui/hp.gd" id="4_8606s"]
 

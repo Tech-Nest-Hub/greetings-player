@@ -1,0 +1,103 @@
+[gd_scene load_steps=12 format=3 uid="uid://c5edy8n7iuhgj"]
+
+[ext_resource type="Script" uid="uid://dj0uc7glji24n" path="res://scripts/transition_fadein_fadeout.gd" id="1_q3ghx"]
+[ext_resource type="Texture2D" uid="uid://clvtoer4n1oyf" path="res://assets/characters/The Male adventurer - Free/Idle/idle_down.png" id="2_5i1mx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wx2h"]
+atlas = ExtResource("2_5i1mx")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1p2d"]
+atlas = ExtResource("2_5i1mx")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngfcl"]
+atlas = ExtResource("2_5i1mx")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkagc"]
+atlas = ExtResource("2_5i1mx")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qw6fj"]
+atlas = ExtResource("2_5i1mx")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xejbi"]
+atlas = ExtResource("2_5i1mx")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxjei"]
+atlas = ExtResource("2_5i1mx")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo26t"]
+atlas = ExtResource("2_5i1mx")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ryri"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wx2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1p2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngfcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkagc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qw6fj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xejbi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxjei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo26t")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}]
+
+[node name="LoadingScreen" type="CanvasLayer"]
+process_mode = 3
+layer = 100
+script = ExtResource("1_q3ghx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 108.5
+offset_bottom = 153.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Loading Resources"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(477, 269)
+scale = Vector2(5.28, 5.28)
+sprite_frames = SubResource("SpriteFrames_0ryri")
+animation = &"idle_down"
+
+[node name="Timer" type="Timer" parent="."]

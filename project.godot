@@ -13,7 +13,10 @@ config_version=5
 config/name="Greetings Player"
 run/main_scene="uid://ch82to6hvs5o1"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+
+[autoload]
+
+TransitionFadeinFadeout="*res://scenes/transition_fadein_fadeout.tscn"
 
 [display]
 

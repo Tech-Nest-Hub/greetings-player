@@ -7,7 +7,6 @@ const SPEED = 300
 var last_direction = "down"
 
 func _physics_process(_delta):
-	
 	var dir = Vector2.ZERO
 	# Movement input
 	if Input.is_action_pressed("ui_right"):

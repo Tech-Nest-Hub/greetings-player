@@ -11,7 +11,7 @@ func _ready() -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://worlds/starting_scene.tscn")
+	TransitionFadeinFadeout.start_loading("res://worlds/starting_scene.tscn")
 
 
 func _on_options_pressed() -> void:

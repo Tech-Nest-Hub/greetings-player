@@ -820,15 +820,15 @@ animations = [{
 script = ExtResource("1_556u7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(596, 317)
+position = Vector2(482, 277)
 scale = Vector2(20, 9.595)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(597, 317.5)
+position = Vector2(483, 277.5)
 shape = SubResource("RectangleShape2D_556u7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(596, 317)
+position = Vector2(482, 277)
 sprite_frames = SubResource("SpriteFrames_1xk3j")
 animation = &"walk_right_up"
 
@@ -839,7 +839,7 @@ texture = ExtResource("14_lh6dm")
 centered = false
 
 [node name="UiBar" parent="." instance=ExtResource("13_sf6kw")]
-offset_left = 109.0
-offset_top = 54.0
-offset_right = 109.0
-offset_bottom = 54.0
+offset_left = -5.0
+offset_top = 14.0
+offset_right = -5.0
+offset_bottom = 14.0
