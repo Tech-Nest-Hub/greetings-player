@@ -33,7 +33,7 @@ func start_loading(path:String) -> void:
 	show()
 	set_process(true)
 	timer.start()
-	label.text = "loading"
+	label.text = "Loading Resources"
 	
 	ResourceLoader.load_threaded_request(scene_path)
 
