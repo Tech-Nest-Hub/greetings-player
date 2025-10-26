@@ -2,11 +2,34 @@ extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
 @onready var tween = get_tree().create_tween()
+@onready var health_bar: Control = $UiBar/PlayerInfoBox/HP
 
-const SPEED = 300
+const SPEED = 175
 var last_direction = "down"
+var max_health = 100
+var current_health = max_health
+
+func _ready() -> void:
+	health_bar.init_health(max_health)
+
+func take_damage(amount: int):
+	current_health = max(current_health - amount, 0)
+	health_bar.health = current_health
+	
+	if current_health <= 0:
+		die()
+
+func heal(amount: int):
+	current_health = min(current_health + amount, max_health)
+	health_bar.health = current_health
+
+func die():
+	anim.play("death_normal_down")
+	anim.hide()
+	queue_free()
 
 func _physics_process(_delta):
+	
 	var dir = Vector2.ZERO
 	# Movement input
 	if Input.is_action_pressed("ui_right"):
@@ -25,6 +48,9 @@ func _physics_process(_delta):
 		# Jump input
 	if Input.is_action_just_pressed("ui_jump"):
 		start_jump()
+		
+	if Input.is_action_just_pressed("take_damage"):
+		take_damage(10)
 
 	# Animation logic
 	if dir == Vector2.ZERO:

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c0sa3umjnh28g"
+path="res://.godot/imported/starting_world.dialogue-bdbeaff6f186f75a441acfba413edef3.tres"
+
+[deps]
+
+source_file="res://worlds/dialogues/starting_world.dialogue"
+dest_files=["res://.godot/imported/starting_world.dialogue-bdbeaff6f186f75a441acfba413edef3.tres"]
+
+[params]
+
+defaults=true
