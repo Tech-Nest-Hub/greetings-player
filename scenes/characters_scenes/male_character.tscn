@@ -838,6 +838,7 @@ texture = ExtResource("14_lh6dm")
 centered = false
 
 [node name="UiBar" parent="." instance=ExtResource("13_sf6kw")]
+z_index = 1
 offset_left = -5.0
 offset_top = 14.0
 offset_right = -5.0
