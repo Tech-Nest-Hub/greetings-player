@@ -13,10 +13,15 @@ config_version=5
 config/name="Greetings Player"
 run/main_scene="uid://ch82to6hvs5o1"
 config/features=PackedStringArray("4.5", "GL Compatibility")
+boot_splash/bg_color=Color(0.003921569, 0.02745098, 0.11372549, 1)
+boot_splash/fullsize=false
+boot_splash/image="res://assets/images/greetings.png"
+config/icon="res://assets/images/greetings.png"
 
 [autoload]
 
 TransitionFadeinFadeout="*res://scenes/transition_fadein_fadeout.tscn"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
 
@@ -24,6 +29,10 @@ window/size/viewport_width=960
 window/size/viewport_height=540
 window/size/mode=3
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 

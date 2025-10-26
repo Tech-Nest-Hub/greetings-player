@@ -8,5 +8,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(_wdelta: float) -> void:
 	animated_sprite_2d.play("Male_Player")

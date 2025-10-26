@@ -833,7 +833,6 @@ sprite_frames = SubResource("SpriteFrames_1xk3j")
 animation = &"walk_right_up"
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
-z_index = 1
 position = Vector2(-24, -33)
 texture = ExtResource("14_lh6dm")
 centered = false
