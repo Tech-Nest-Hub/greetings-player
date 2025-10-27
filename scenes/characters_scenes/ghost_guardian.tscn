@@ -122,6 +122,7 @@ script = ExtResource("2_02o6r")
 
 [node name="Area2D" parent="." instance=ExtResource("3_yv04u")]
 dialogue_resource = ExtResource("4_ayc3m")
+dialogue_start = "start"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_ayc3m")

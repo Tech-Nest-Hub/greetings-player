@@ -31,7 +31,8 @@ func die():
 	queue_free()
 
 func _physics_process(_delta):
-	
+
+			
 	var dir = Vector2.ZERO
 	# Movement input
 	if Input.is_action_pressed("ui_right"):
@@ -53,11 +54,7 @@ func _physics_process(_delta):
 		
 	if Input.is_action_just_pressed("take_damage"):
 		take_damage(10)
-	if Input.is_action_just_pressed("ui_interact_dialogue"):
-		var actionables = actionable_finder.get_overlapping_areas()
-		if actionables.size() > 0:
-			actionables[0].action()
-			return 
+		
 
 	# Animation logic
 	if dir == Vector2.ZERO:
