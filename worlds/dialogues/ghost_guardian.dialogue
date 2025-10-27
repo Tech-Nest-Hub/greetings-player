@@ -1,11 +1,32 @@
 ~ start
-Ghost: [[Hi|Hello|Howdy]], this is some dialogue. Global.player_name player_name globalscript.player_name
-User: Here are some choices. {{Global.player_name}}
-- First one
-	Ghost: You picked the first one.
-- Second one
-	Ghost: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+{{Global.player_name}}: [[Hi|Hello...]] Where am I?
+
+UNKNOWN: ...You finally woke up.
+UNKNOWN: Do you remember your name?
+
+{{Global.player_name = "Ghost"}}
+
+UNKNOWN: Hmm... "Ghost," is it?
+UNKNOWN: A fitting name for someone lost between worlds.
+
+UNKNOWN: Let’s see if your memory still serves you...
+
+- I Remember Something
+	Ghost: I... I think I remember something.
+	UNKNOWN: Interesting. Perhaps your mind isn’t completely broken.
+- I Don’t Know
+	Ghost: Everything’s blank... I don’t remember anything.
+	UNKNOWN: Then we have much to uncover, Ghost.
+
+UNKNOWN: Listen carefully.
+UNKNOWN: The place where you opened your eyes... that portal is your path forward.
+UNKNOWN: Step through it, and you’ll arrive in the Beginner’s Town.
+UNKNOWN: Lay low there — the others will sense your arrival.
+
+UNKNOWN: This world is a tower — endless, rising far beyond the clouds.
+UNKNOWN: Each floor holds trials and monsters... only those who survive ascend.
+UNKNOWN: Conquer them, Ghost, and you may uncover why you’re truly here.
+
+UNKNOWN: Go now. The first floor awaits.
+
 => END

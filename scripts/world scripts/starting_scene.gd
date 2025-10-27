@@ -4,7 +4,6 @@ extends Node2D
 @onready var first_spawner: Area2D = $"First Spawner"
 @onready var terrians: Node2D = $Terrians
 @onready var male_player: CharacterBody2D = $MalePlayer
-@onready var panel: Panel = $Panel
 @onready var timer: Timer = $Timer
 @onready var fade_rect: ColorRect = $FadeRect
 
@@ -24,7 +23,7 @@ func _process(_delta: float) -> void:
 		if action.size() > 0:
 			has_triggered_dialogue = true
 			action[0].action()
-			
+			first_spawner.hide()
 			timer.wait_time = 5
 			timer.start()
 			await timer.timeout
@@ -43,7 +42,6 @@ func _before_cut_scene() -> void:
 
 func _after_cut_scene()-> void:
 	first_spawner.hide()
-	panel.hide()
 	await fade_in(1.5)
 	
 	timer.wait_time = 1
@@ -76,3 +74,6 @@ func fade_out(_duration: float) -> void:
 	for i in range(steps):
 		await get_tree().process_frame
 		fade_rect.modulate.a = 1.0
+
+func go_to_floorone()-> void:
+	TransitionFadeinFadeout.start_loading("res://worlds/floor1/beginneers_town.tscn")
