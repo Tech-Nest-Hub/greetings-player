@@ -3,6 +3,8 @@ extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
 @onready var tween = get_tree().create_tween()
 @onready var health_bar: Control = $UiBar/PlayerInfoBox/HP
+@onready var actionable_finder: Area2D = $DIRECTION/ActionableFinder
+
 
 const SPEED = 175
 var last_direction = "down"
@@ -51,6 +53,11 @@ func _physics_process(_delta):
 		
 	if Input.is_action_just_pressed("take_damage"):
 		take_damage(10)
+	if Input.is_action_just_pressed("ui_interact_dialogue"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			return 
 
 	# Animation logic
 	if dir == Vector2.ZERO:

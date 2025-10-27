@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cur4jkg4ule7l"
+path="res://.godot/imported/ghost_guardian.dialogue-fe2f82928f96043f8492d34c2a4144fe.tres"
+
+[deps]
+
+source_file="res://worlds/dialogues/ghost_guardian.dialogue"
+dest_files=["res://.godot/imported/ghost_guardian.dialogue-fe2f82928f96043f8492d34c2a4144fe.tres"]
+
+[params]
+
+defaults=true
