@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
 @onready var tween = get_tree().create_tween()
-@onready var health_bar: Control = $UiBar/PlayerInfoBox/HP
+@onready var health_bar: Control = $UiBar/VBoxContainer/HP
 @onready var actionable_finder: Area2D = $DIRECTION/ActionableFinder
 
 

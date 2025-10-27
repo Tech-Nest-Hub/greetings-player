@@ -1,10 +1,10 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
+Ghost: [[Hi|Hello|Howdy]], this is some dialogue. Global.player_name player_name globalscript.player_name
+User: Here are some choices. {{Global.player_name}}
 - First one
-	Nathan: You picked the first one.
+	Ghost: You picked the first one.
 - Second one
-	Nathan: You picked the second one.
+	Ghost: You picked the second one.
 - Start again => start
 - End the conversation => END
 Nathan: For more information see the online documentation.

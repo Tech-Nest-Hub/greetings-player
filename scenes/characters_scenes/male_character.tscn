@@ -887,6 +887,7 @@ script = ExtResource("1_556u7")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(482, 277)
 scale = Vector2(20, 9.595)
+zoom = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(483, 277.5)
@@ -904,10 +905,10 @@ centered = false
 
 [node name="UiBar" parent="." instance=ExtResource("13_sf6kw")]
 z_index = 1
-offset_left = -5.0
-offset_top = 14.0
-offset_right = -5.0
-offset_bottom = 14.0
+offset_left = 219.0
+offset_top = 147.0
+offset_right = 219.0
+offset_bottom = 147.0
 
 [node name="DIRECTION" type="Marker2D" parent="."]
 

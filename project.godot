@@ -22,10 +22,12 @@ config/icon="res://assets/images/greetings.png"
 
 TransitionFadeinFadeout="*res://scenes/transition_fadein_fadeout.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Global="*res://globals/globalscript.gd"
 
 [dialogue_manager]
 
 runtime/balloon_path="res://worlds/dialogues/balloon.tscn"
+runtime/state_autoload_shortcuts=[]
 
 [display]
 
