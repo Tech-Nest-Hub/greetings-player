@@ -1,20 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://qhjd2tb64aul"]
+[gd_scene load_steps=21 format=3 uid="uid://qhjd2tb64aul"]
 
 [ext_resource type="Script" uid="uid://g3iyvfj3t3bp" path="res://scripts/ui/ui_bar.gd" id="1_k3dy2"]
 [ext_resource type="Texture2D" uid="uid://vbarl6pm4knk" path="res://assets/characters/The Male adventurer - Free/Idle/idle_right_down.png" id="1_svl8d"]
 [ext_resource type="FontFile" uid="uid://ctwi4qwh36a4i" path="res://assets/fonts/Game of Brush.ttf" id="3_ps5rt"]
 [ext_resource type="Script" uid="uid://b7nefo64lxdcx" path="res://scripts/ui/hp.gd" id="4_8606s"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ps5rt"]
-bg_color = Color(1, 1, 1, 1)
-border_color = Color(1, 1, 1, 1)
-border_blend = true
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0.9077384, 0.00085807504, 0.9386246, 0.6)
-shadow_size = 3
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8606s"]
 atlas = ExtResource("1_svl8d")
@@ -138,21 +127,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k3dy2")
-
-[node name="AvatarFrame" type="Panel" parent="."]
-modulate = Color(0.11052487, 0.31626254, 0.3403933, 1)
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 36.0
-offset_top = -240.0
-offset_right = 68.99176
-offset_bottom = -227.15454
-grow_vertical = 2
-rotation = 6.2831855
-scale = Vector2(0.9440561, 1.2385794)
-theme_override_styles/panel = SubResource("StyleBoxFlat_ps5rt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(52, 27)

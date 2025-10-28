@@ -10,7 +10,7 @@ Is this... another world?
 ~ start 
 This is a portal
 - Travel to Floor 1
-do go_to_floorone()
+	do go_to_floorone()
 - Stay here
 	Ghost: I’ll look around a bit more.
 => END

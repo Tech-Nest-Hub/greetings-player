@@ -5,6 +5,7 @@ UNKNOWN: ...You finally woke up.
 UNKNOWN: Do you remember your name?
 
 {{Global.player_name = "Ghost"}}
+do Global._save_player()
 
 UNKNOWN: Hmm... "Ghost," is it?
 UNKNOWN: A fitting name for someone lost between worlds.
