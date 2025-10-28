@@ -14,3 +14,7 @@ This is a portal
 - Stay here
 	Ghost: I’ll look around a bit more.
 => END
+
+~ press_k
+Press K To Interact with Things
+=> END

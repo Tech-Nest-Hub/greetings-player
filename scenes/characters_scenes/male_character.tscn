@@ -917,5 +917,5 @@ collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DIRECTION/ActionableFinder"]
-position = Vector2(483, 287)
+position = Vector2(483, 291)
 shape = SubResource("CircleShape2D_ulprv")

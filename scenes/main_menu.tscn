@@ -52,6 +52,10 @@ shadow_offset = Vector2(0, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa1go"]
 bg_color = Color(0.1428582, 0.14285827, 0.14285818, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_wu84c"]
 color = Color(1, 1, 1, 1)
@@ -99,57 +103,74 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -156.125
-offset_top = -255.5
+offset_top = -249.0
 offset_right = 156.125
-offset_bottom = -21.0
+offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = 10
+theme_override_constants/separation = 7
 
 [node name="Button" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jk1qb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_tbmy8")
-text = "Start Game"
+text = "CONTINUE"
+
+[node name="Button5" type="Button" parent="MainButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jk1qb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_tbmy8")
+text = "START GAME"
 
 [node name="Button3" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jk1qb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
-text = "Options"
+text = "OPTIONS"
 
 [node name="Button4" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jk1qb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
-text = "Credits"
+text = "CREDITS"
 
 [node name="Button2" type="Button" parent="MainButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jk1qb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
-text = "Exit"
+text = "EXIT"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -284,7 +305,8 @@ stream = ExtResource("4_wu84c")
 autoplay = true
 bus = &"Music"
 
-[connection signal="pressed" from="MainButtons/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainButtons/Button" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MainButtons/Button5" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/Button3" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MainButtons/Button2" to="." method="_on_exit_pressed"]
 [connection signal="value_changed" from="Options/VBoxContainer/HBoxContainer/AudioControl" to="Options/VBoxContainer/HBoxContainer/AudioControl" method="_on_value_changed"]

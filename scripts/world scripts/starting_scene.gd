@@ -6,13 +6,21 @@ extends Node2D
 @onready var male_player: CharacterBody2D = $MalePlayer
 @onready var timer: Timer = $Timer
 @onready var fade_rect: ColorRect = $FadeRect
+@onready var press_k: Panel = $Stand/PressK
+@onready var stand_area: Area2D = $Stand
+
 
 
 
 var has_triggered_dialogue
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	press_k.visible = false
+		# Optional: Connect signals in code if not done in editor
+	if not stand_area.area_entered.is_connected(_on_stand_area_entered):
+		stand_area.area_entered.connect(_on_stand_area_entered)
+	if not stand_area.area_exited.is_connected(_on_stand_area_exited):
+		stand_area.area_exited.connect(_on_stand_area_exited)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,6 +37,7 @@ func _process(_delta: float) -> void:
 			await timer.timeout
 			_after_cut_scene()
 			return 
+
 	if Input.is_action_just_pressed("ui_interact_dialogue"):
 		var actionables = actionable_finder.get_overlapping_areas()
 		if actionables.size() > 0:
@@ -76,4 +85,16 @@ func fade_out(_duration: float) -> void:
 		fade_rect.modulate.a = 1.0
 
 func go_to_floorone()-> void:
-	TransitionFadeinFadeout.start_loading("res://worlds/floor1/beginneers_town.tscn")
+	SaveLoad.SaveFileData.last_scene = "res://worlds/floor1/beginneers_town.tscn"
+	SaveLoad.save()
+	TransitionFadeinFadeout.start_loading(SaveLoad.SaveFileData.last_scene)
+	
+
+
+func _on_stand_area_entered(_area: Area2D) -> void:
+	press_k.visible = true
+
+
+
+func _on_stand_area_exited(_area: Area2D) -> void:
+	press_k.visible = false

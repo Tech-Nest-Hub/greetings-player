@@ -11,12 +11,11 @@ func _ready() -> void:
 
 
 func _on_start_pressed() -> void:
-		# Load the saved data before transitioning
-	SaveLoad._load()
-	
-	# Now you can access the loaded player name
-	print("Loaded player name: ", SaveLoad.SaveFileData.player_name)
-	TransitionFadeinFadeout.start_loading("res://worlds/starting_scene.tscn")
+	SaveLoad.SaveFileData = SaveData.new()
+	SaveLoad.SaveFileData.player_name = "Aakash"
+	SaveLoad.SaveFileData.last_scene = "res://worlds/starting_scene.tscn"
+	SaveLoad.save()
+	TransitionFadeinFadeout.start_loading(SaveLoad.SaveFileData.last_scene)
 	
 
 
@@ -31,3 +30,12 @@ func _on_exit_pressed() -> void:
 
 func _on_back_pressed() -> void:
 	_ready()
+
+
+func _on_continue_pressed() -> void:
+		SaveLoad._load()
+		if SaveLoad.SaveFileData.last_scene == "":
+			SaveLoad.SaveFileData.last_scene = "res://worlds/starting_scene.tscn"
+			
+		TransitionFadeinFadeout.start_loading(SaveLoad.SaveFileData.last_scene)
+		
