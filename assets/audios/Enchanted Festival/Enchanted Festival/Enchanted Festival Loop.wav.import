@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://idlt114q5io0"
+path="res://.godot/imported/Enchanted Festival Loop.wav-c3b4101c1f35f38cf74562a67118bc14.sample"
+
+[deps]
+
+source_file="res://assets/audios/Enchanted Festival/Enchanted Festival/Enchanted Festival Loop.wav"
+dest_files=["res://.godot/imported/Enchanted Festival Loop.wav-c3b4101c1f35f38cf74562a67118bc14.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

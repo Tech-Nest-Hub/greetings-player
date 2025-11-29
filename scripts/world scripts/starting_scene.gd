@@ -6,8 +6,8 @@ extends Node2D
 @onready var male_player: CharacterBody2D = $MalePlayer
 @onready var timer: Timer = $Timer
 @onready var fade_rect: ColorRect = $FadeRect
-@onready var press_k: Panel = $Stand/PressK
 @onready var stand_area: Area2D = $Stand
+@onready var press_k: Panel = $Control/PressK
 
 
 
@@ -15,18 +15,21 @@ extends Node2D
 var has_triggered_dialogue
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	press_k.visible = false
+	press_k.visible = true
 		# Optional: Connect signals in code if not done in editor
 	if not stand_area.area_entered.is_connected(_on_stand_area_entered):
 		stand_area.area_entered.connect(_on_stand_area_entered)
 	if not stand_area.area_exited.is_connected(_on_stand_area_exited):
 		stand_area.area_exited.connect(_on_stand_area_exited)
 
-
+var did_before_cutscene = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if not has_triggered_dialogue:
-		_before_cut_scene()
+		if not did_before_cutscene:
+			did_before_cutscene = true;
+			_before_cut_scene()
+			
 		var action = actionable_finder.get_overlapping_areas()
 		if action.size() > 0:
 			has_triggered_dialogue = true

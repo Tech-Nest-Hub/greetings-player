@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgndrocie4ud0"
+path="res://.godot/imported/Enchanted Festival.mp3-b433921069bf6ef017ffa82987f8c012.mp3str"
+
+[deps]
+
+source_file="res://assets/audios/Enchanted Festival/Enchanted Festival/Enchanted Festival.mp3"
+dest_files=["res://.godot/imported/Enchanted Festival.mp3-b433921069bf6ef017ffa82987f8c012.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
